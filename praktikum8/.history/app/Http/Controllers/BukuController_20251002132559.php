@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Buku;
+use Illuminate\Http\Request;
+
+class BukuController extends Controller
+{
+    public function index()
+    {
+        $buku = Buku::all();
+        return view('home', compact('buku'));
+    }
+
+    public function create()
+    {
+        return view('create-buku');
+    }
+
+    
+}
